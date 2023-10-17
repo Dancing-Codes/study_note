@@ -1,0 +1,12 @@
+sqoop import \
+--connect jdbc:mysql://node1:3306/insurance \
+--username root \
+--password 123456 \
+--table \
+--query \
+--hive-table \
+--hive-import \
+--hive-overwrite \
+--fields-terminated-by '\t' \
+--delete-target-dir \
+-m 1
